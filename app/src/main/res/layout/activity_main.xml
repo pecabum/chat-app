@@ -1,0 +1,138 @@
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+    <!--CardView-->
+    <!--<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--android:id="@+id/recycler_view"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:scrollbars="vertical">-->
+
+    <!--</android.support.v7.widget.RecyclerView>-->
+
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:elevation="2dp"
+            android:background="@drawable/myrect"
+            android:layout_height="50dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:background="@android:color/transparent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_action_search"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="Search Contacts and Messages"
+                android:gravity="center_vertical"
+                android:maxEms="15"
+                android:layout_weight="7"
+                android:textSize="14sp"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_action_mic"
+                android:background="@android:color/transparent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+
+            <ImageButton
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_action_overflow"
+                android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_user"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:elevation="2dp"
+            android:animateLayoutChanges="true"
+            android:visibility="gone"
+            android:background="@drawable/myrect"
+            android:layout_height="100dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/userImage"
+                    android:layout_width="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_action_search"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    <!-- A CardView that contains a TextView -->
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#909090"/>
+    
+    <android.support.v4.app.FragmentTabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"/>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+    </android.support.v4.app.FragmentTabHost>
+
+</LinearLayout>
